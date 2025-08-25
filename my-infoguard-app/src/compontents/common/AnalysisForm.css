@@ -1,0 +1,251 @@
+/* ===========================
+    RESET & BASE
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8fafc; /* Soft neutral background */
+}
+
+/* ===========================
+    FORM CONTAINER
+=========================== */
+.analysis-form-container {
+  width: 100%;
+  max-width: 52rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  border-radius: 1.2rem;
+  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.5s ease;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.analysis-form-container:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, #f0f4ff, #fafafa);
+  box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+    HEADER
+=========================== */
+.analysis-form-header {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1d1d42;
+  margin-bottom: 2.2rem;
+  text-align: center;
+  background: linear-gradient(90deg, #6366f1, #ec4899, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s infinite alternate;
+}
+
+@keyframes gradientMove {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+/* ===========================
+    TAB NAVIGATION
+=========================== */
+.tab-navigation-wrapper {
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  flex: 1;
+  min-width: 8rem;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #f9fafb, #f1f5f9);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #475569;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tab-button:hover .tab-label {
+  color: #fff;
+}
+
+.tab-button:hover {
+  color: #111827;
+  background: linear-gradient(135deg, #dbeafe, #ede9fe);
+  transform: scale(1.05);
+}
+
+.tab-button.active {
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.tab-button.active .tab-icon {
+  color: #fff;
+}
+
+/* ===========================
+    INPUTS & TEXTAREA
+=========================== */
+.form-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+.form-textarea,
+.form-input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.form-textarea:focus,
+.form-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+  transform: scale(1.02);
+}
+
+/* ===========================
+    DROPZONE
+=========================== */
+.dropzone-container {
+  border: 3px dashed #94a3b8;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #f9fafb, #f1f5f9);
+  min-height: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.dropzone-container:hover {
+  background: linear-gradient(135deg, #dbeafe, #ede9fe);
+  border-color: #6366f1;
+  transform: scale(1.02);
+}
+
+/* ===========================
+    ACTION BUTTONS
+=========================== */
+.analyze-actions-section {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-to-dashboard-button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+  background: transparent;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-to-dashboard-button:hover {
+  color: #ec4899;
+  transform: scale(1.05);
+}
+
+.analyze-button {
+  background-image: linear-gradient(90deg, #6366f1, #ec4899, #f59e0b);
+  background-size: 200% auto;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  animation: pulse 2s infinite;
+}
+
+.analyze-button:hover:not(.disabled) {
+  background-position: right center;
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(99, 102, 241, 0.6);
+}
+
+.analyze-button.disabled {
+  background: #cbd5e1;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.7;
+  animation: none;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ===========================
+    RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .analysis-form-container {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .analysis-form-header {
+    font-size: 1.6rem;
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+}

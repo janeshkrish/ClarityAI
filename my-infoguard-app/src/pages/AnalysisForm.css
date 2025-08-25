@@ -1,0 +1,141 @@
+.analysis-form-container {
+    width: 100%;
+    max-width: 48rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.analysis-form-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+}
+
+.analysis-form-tabs-container {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tab-button {
+    flex-grow: 1;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    color: #151618;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    color: #fff;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+
+.tab-button:hover:not(.active) {
+    color: #18191a;
+    border-color: #3333c1;
+}
+
+.tab-content {
+    padding-top: 1.5rem;
+}
+
+.tab-pane {
+    display: block;
+}
+
+.tab-pane.hidden {
+    display: none;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #121213;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.form-textarea:focus {
+    outline: 2px solid #6366f1;
+    border-color: transparent;
+}
+
+.analyze-options-header {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.analyze-options-list {
+    font-size: 0.875rem;
+    color: #141617;
+    list-style: disc;
+    list-style-position: inside;
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.analyze-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.analyze-button {
+    background-color: #4f46e5;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.analyze-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.analyze-button:hover:not(.disabled) {
+    background-color: #3730a3;
+}
+/* Other styles from your AnalysisForm.css file */
+
+.dropzone-container {
+  /* ... existing styles ... */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.tab-pane {
+  /* This is the parent container of the dropzone. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  place-items: center;
+}

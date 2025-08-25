@@ -1,0 +1,244 @@
+/* ===========================
+    PAGE CONTAINER
+=========================== */
+.profile-page-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* ===========================
+    MAIN PROFILE CARD
+=========================== */
+.profile-card {
+  width: 100%;
+  max-width: 48rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  border-radius: 1.2rem;
+  box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-header {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1d1d42;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(90deg, #6366f1, #ec4899, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s infinite alternate;
+}
+
+@keyframes gradientMove {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+/* ===========================
+    PROFILE SECTIONS
+=========================== */
+.profile-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.profile-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.profile-section-header-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #4f46e5;
+}
+
+.profile-section-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1d1d42;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.detail-item {
+  padding: 1.2rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #64748b;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .progress-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.progress-card {
+  padding: 1.2rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.progress-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.progress-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #64748b;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.progress-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4f46e5;
+  background-clip: text;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badges-container {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.badges-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1d1d42;
+  margin-bottom: 1rem;
+}
+
+.badges-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #e0e7ff;
+  border-radius: 9999px;
+  color: #4f46e5;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.1);
+}
+
+.badge-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #4f46e5;
+}
+
+.profile-actions-container {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.back-button, .logout-button {
+  font-weight: 600;
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.back-button {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.back-button:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+.logout-button {
+  background-image: linear-gradient(90deg, #f59e0b, #ec4899);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.4);
+}
+
+.logout-button:hover {
+  background-image: linear-gradient(90deg, #ec4899, #6366f1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(236, 72, 153, 0.6);
+}
